@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Painel RH | Canal Anônimo SOS</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+
+</head>
+
+
+<body>
+
+
+<div class="pagina">
+
+
+<header class="header">
+
+
+    <img 
+        src="{{ url_for('static', filename='img/logo.png') }}" 
+        alt="Logo Lobios" 
+        class="logo-header">
+
+
+    <div>
+
+
+        <a 
+            href="{{ url_for('pages.index') }}" 
+            class="btn secundario">
+
+            Início
+
+        </a>
+
+
+
+        <a
+            href="{{ url_for('pages.admin') }}"
+            id="btnAdministradores"
+            class="btn principal"
+            style="display:none;">
+
+            Administradores
+
+        </a>
+
+
+
+        <button
+            class="btn principal"
+            onclick="logout()">
+
+            Sair
+
+        </button>
+
+
+    </div>
+
+
+</header>
+
+
+
+<div class="container">
+
+
+
+<div class="topo">
+
+
+<h1>
+    Painel Administrativo
+</h1>
+
+
+<p>
+    Gerenciamento das ocorrências recebidas.
+</p>
+
+
+
+<div 
+id="areaGerente" 
+style="display:none; margin-top:20px;">
+
+
+    <a 
+        href="{{ url_for('pages.admin') }}" 
+        class="btn principal">
+
+        Gerenciar Administradores
+
+    </a>
+
+
+</div>
+
+
+</div>
+
+
+
+
+<div class="conteudo">
+
+
+
+<div class="dashboard-cards">
+
+
+
+<div 
+class="dash-card ativo"
+data-status=""
+onclick="filtrarPorCard('')">
+
+
+<h2 id="total">
+0
+</h2>
+
+
+<p>
+Total
+</p>
+
+
+</div>
+
+
+
+
+
+<div 
+class="dash-card"
+data-status="Recebida"
+onclick="filtrarPorCard('Recebida')">
+
+
+<h2 id="recebidas">
+0
+</h2>
+
+
+<p>
+Recebidas
+</p>
+
+
+</div>
+
+
+
+
+
+<div 
+class="dash-card"
+data-status="Em análise"
+onclick="filtrarPorCard('Em análise')">
+
+
+<h2 id="analise">
+0
+</h2>
+
+
+<p>
+Em análise
+</p>
+
+
+</div>
+
+
+
+
+
+<div 
+class="dash-card"
+data-status="Concluída"
+onclick="filtrarPorCard('Concluída')">
+
+
+<h2 id="concluidas">
+0
+</h2>
+
+
+<p>
+Concluídas
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+<div class="campo">
+
+
+<label>
+Pesquisar por protocolo
+</label>
+
+
+<input
+
+type="text"
+
+id="pesquisa"
+
+placeholder="SOS-2026-000154">
+
+
+</div>
+
+
+
+
+
+
+<div class="filtros">
+
+
+
+<select id="filtroCategoria">
+
+<option value="">
+Todas as categorias
+</option>
+
+<option>
+Assédio Moral
+</option>
+
+<option>
+Assédio Sexual
+</option>
+
+<option>
+Discriminação ou Preconceito
+</option>
+
+<option>
+Conflito entre Colaboradores
+</option>
+
+<option>
+Problemas de Conduta
+</option>
+
+<option>
+Irregularidade ou Descumprimento de Normas
+</option>
+
+<option>
+Segurança ou Condições de Trabalho
+</option>
+
+<option>
+Sugestão de Melhoria
+</option>
+
+<option>
+Reclamação Geral
+</option>
+
+<option>
+Outro
+</option>
+
+</select>
+
+
+
+
+
+<select id="filtroPrioridade">
+
+<option value="">
+Todas as prioridades
+</option>
+
+
+<option>
+Alta
+</option>
+
+
+<option>
+Média
+</option>
+
+
+<option>
+Baixa
+</option>
+
+</select>
+
+
+
+</div>
+
+
+
+
+
+
+
+<table>
+
+
+<thead>
+
+
+<tr>
+
+
+<th>
+Protocolo
+</th>
+
+
+<th>
+Categoria
+</th>
+
+
+<th>
+Status
+</th>
+
+
+<th>
+Data
+</th>
+
+
+<th>
+Ações
+</th>
+
+
+</tr>
+
+
+</thead>
+
+
+
+<tbody id="tabelaDenuncias">
+
+
+</tbody>
+
+
+
+</table>
+
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+<script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ocorrência Enviada | Canal Anônimo SOS</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/protocolo.css') }}">
+
+</head>
+
+<body>
+
+<div class="pagina">
+
+    <header class="header">
+
+        <img src="{{ url_for('static', filename='img/logo.png') }}"
+             alt="Logo Lobios"
+             class="logo-header">
+
+        <a href="{{ url_for('pages.login') }}" class="login-rh">
+            👤 Acesso RH
+        </a>
+
+    </header>
+
+    <div class="container">
+
+        <div class="topo">
+
+            <h1>✔ Ocorrência enviada</h1>
+
+            <p>Obrigado por contribuir para um ambiente de trabalho melhor.</p>
+
+        </div>
+
+        <div class="conteudo">
+
+            <div class="card sucesso">
+
+                <h2>Ocorrência registrada com sucesso!</h2>
+
+                <p>
+
+                    Sua ocorrência foi recebida pelo sistema.
+
+                    Anote o protocolo abaixo. Ele será necessário para acompanhar o andamento do caso.
+
+                </p>
+
+            </div>
+
+            <div class="protocolo-box">
+
+                <span>Seu protocolo</span>
+
+                <h1 id="protocolo">SOS-2026-000154</h1>
+
+            </div>
+
+            <div class="botoes">
+
+                <button
+                    class="btn secundario"
+                    onclick="copiarProtocolo()">
+
+                    📋 Copiar protocolo
+
+                </button>
+
+                <a
+                    id="btnAcompanhar"
+                    href="#"
+                    class="btn principal">
+
+                    Acompanhar ocorrência
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div id="toast">
+
+    ✅ Protocolo copiado para a área de transferência!
+
+</div>
+
+<script src="{{ url_for('static', filename='js/protocolo.js') }}"></script>
+
+</body>
+
+</html>

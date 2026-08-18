@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nova Ocorrência | Canal Anônimo SOS</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/nova_denuncia.css') }}">
+
+</head>
+
+<body>
+
+<div class="pagina">
+
+    <img src="{{ url_for('static', filename='img/logo.png') }}"
+         alt="Logo Lobios"
+         class="logo-header">
+
+
+    <div class="container">
+
+
+        <div class="topo">
+
+            <h1>Nova Ocorrência</h1>
+
+            <p>
+                Sua identidade será preservada durante todo o processo.
+            </p>
+
+        </div>
+
+
+
+        <div class="conteudo">
+
+
+            <div class="card">
+
+                <h2>🔒 Confidencialidade Garantida</h2>
+
+                <p>
+                    Este canal é totalmente anônimo.
+                    Nenhum dado pessoal será solicitado.
+                    Quanto mais detalhes você informar,
+                    melhor será a análise realizada pelo RH.
+                </p>
+
+            </div>
+
+
+
+
+            <form id="formDenuncia">
+
+
+                <div class="campo">
+
+
+                    <label for="categoria">
+                        Categoria
+                    </label>
+
+
+                    <select id="categoria" required>
+
+
+                        <option value="">
+                            Selecione a categoria...
+                        </option>
+
+
+                        <option>
+                            Assédio Moral
+                        </option>
+
+
+                        <option>
+                            Assédio Sexual
+                        </option>
+
+
+                        <option>
+                            Discriminação ou Preconceito
+                        </option>
+
+
+                        <option>
+                            Conflito entre Colaboradores
+                        </option>
+
+
+                        <option>
+                            Problemas de Conduta
+                        </option>
+
+
+                        <option>
+                            Irregularidade ou Descumprimento de Normas
+                        </option>
+
+
+                        <option>
+                            Segurança ou Condições de Trabalho
+                        </option>
+
+
+                        <option>
+                            Sugestão de Melhoria
+                        </option>
+
+
+                        <option>
+                            Reclamação Geral
+                        </option>
+
+
+                        <option>
+                            Outro
+                        </option>
+
+
+                    </select>
+
+
+                </div>
+
+                <div class="campo">
+
+                <label for="prioridade">
+                    Prioridade
+                </label>
+
+                <select id="prioridade" disabled>
+
+                    <option value="">
+                        Será definida automaticamente...
+                    </option>
+
+                    <option value="Alta">
+                        🔴 Alta
+                    </option>
+
+                    <option value="Média">
+                        🟡 Média
+                    </option>
+
+                    <option value="Baixa">
+                        🟢 Baixa
+                    </option>
+
+                </select>
+
+                <small style="display:block; margin-top:6px; color:#666; font-size:13px;">
+                    A prioridade será definida automaticamente conforme a categoria escolhida.
+                </small>
+
+            </div>
+
+                <div class="campo">
+
+                    <label for="setor">
+                        Setor
+                    </label>
+
+
+                    <select id="setor" required>
+
+
+                        <option value="">
+                            Selecione o setor...
+                        </option>
+
+
+                        <option>
+                            Recursos Humanos
+                        </option>
+
+
+                        <option>
+                            Financeiro
+                        </option>
+
+
+                        <option>
+                            Tecnologia da Informação
+                        </option>
+
+
+                        <option>
+                            Administrativo
+                        </option>
+
+
+                        <option>
+                            Operações
+                        </option>
+
+
+                        <option>
+                            Comercial
+                        </option>
+
+
+                        <option>
+                            Produção
+                        </option>
+
+
+                        <option>
+                            Outro
+                        </option>
+
+
+                    </select>
+
+
+                </div>
+
+
+
+
+
+                <div class="campo">
+
+
+                    <label for="local">
+                        Local do ocorrido
+                    </label>
+
+
+                    <input
+                        id="local"
+                        type="text"
+                        placeholder="Informe o local">
+
+
+                </div>
+
+
+
+
+
+                <div class="campo">
+
+
+                    <label for="data_ocorrido">
+                        Data aproximada
+                    </label>
+
+
+                    <input
+                        id="data_ocorrido"
+                        type="date"
+                        lang="pt-BR">
+
+
+                </div>
+
+
+
+
+
+                <div class="campo">
+
+
+                    <label for="descricao">
+                        Descrição da ocorrência
+                    </label>
+
+
+                    <textarea
+                        id="descricao"
+                        placeholder="Descreva o ocorrido com o máximo de detalhes possível..."
+                        required></textarea>
+
+
+                </div>
+
+
+
+
+
+                <div class="campo">
+
+
+                    <label for="anexo">
+                        Anexar arquivo (opcional)
+                    </label>
+
+
+                    <input
+                        id="anexo"
+                        type="file">
+
+
+                </div>
+
+
+
+
+
+                <div class="botoes">
+
+
+                    <a href="{{ url_for('pages.index') }}"
+                       class="btn secundario">
+
+                        Voltar
+
+                    </a>
+
+
+
+                    <button
+                        type="submit"
+                        class="btn principal"
+                        id="btnEnviar">
+
+                        Enviar ocorrência
+
+                    </button>
+
+
+                </div>
+
+
+
+            </form>
+
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+
+<script src="{{ url_for('static', filename='js/nova_denuncia.js') }}"></script>
+
+
+</body>
+
+</html>

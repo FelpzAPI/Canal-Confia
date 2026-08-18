@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Detalhes da Ocorrência | Canal Anônimo SOS</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/detalhes_denuncia.css') }}">
+
+</head>
+
+<body>
+
+<div class="pagina">
+
+<header class="header">
+
+<img src="{{ url_for('static', filename='img/logo.png') }}" 
+alt="Logo Lobios" 
+class="logo-header">
+
+
+<div>
+
+<a href="{{ url_for('pages.dashboard') }}" class="btn secundario">
+
+← Dashboard
+
+</a>
+
+
+<button 
+class="btn principal" 
+onclick="logout()">
+
+Sair
+
+</button>
+
+
+</div>
+
+</header>
+
+
+<div class="container">
+
+
+<div class="topo">
+
+<h1>
+
+Detalhes da Ocorrência
+
+</h1>
+
+
+<p>
+
+Visualize e atualize as informações da ocorrência.
+
+</p>
+
+
+</div>
+
+
+
+
+<div class="conteudo">
+
+
+<div class="card">
+
+
+<h2>
+
+Informações da ocorrência
+
+</h2>
+
+
+
+
+<div class="campo">
+
+<label>
+
+Protocolo
+
+</label>
+
+
+<input
+id="protocolo"
+type="text"
+readonly>
+
+</div>
+
+
+
+
+<div class="campo">
+
+<label>
+
+Categoria
+
+</label>
+
+
+<input
+id="categoria"
+type="text"
+readonly>
+
+</div>
+
+
+
+
+<div class="campo">
+
+<label>
+
+Setor
+
+</label>
+
+
+<input
+id="setor"
+type="text"
+readonly>
+
+</div>
+
+
+
+
+<div class="campo">
+
+<label>
+
+Local
+
+</label>
+
+
+<input
+id="local"
+type="text"
+readonly>
+
+</div>
+
+
+
+
+<div class="campo">
+
+<label>
+
+Data do ocorrido
+
+</label>
+
+
+<input
+id="data_ocorrido"
+type="text"
+readonly>
+
+</div>
+
+
+
+
+<div class="campo">
+
+<label>
+
+Descrição
+
+</label>
+
+
+<textarea
+id="descricao"
+rows="6"
+readonly></textarea>
+
+</div>
+
+
+
+
+<div class="campo">
+
+<label>
+
+Anexo
+
+</label>
+
+
+<div id="areaAnexo">
+
+Nenhum arquivo enviado.
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="campo">
+
+<label>
+
+Status
+
+</label>
+
+
+<select id="status">
+
+<option>Recebida</option>
+
+<option>Em análise</option>
+
+<option>Concluída</option>
+
+</select>
+
+
+</div>
+
+
+
+
+
+<div class="campo">
+
+<label>
+
+Prioridade
+
+</label>
+
+<select id="prioridade">
+
+    <option>Baixa</option>
+
+    <option>Média</option>
+
+    <option>Alta</option>
+
+</select>
+
+</div>
+
+
+
+
+
+<div class="campo">
+
+<label>
+
+Prazo de resposta
+
+</label>
+
+
+<input
+id="prazo_resposta"
+type="text"
+readonly>
+
+
+</div>
+
+
+
+
+
+<div class="campo">
+
+<label>
+
+Observação do RH
+
+</label>
+
+
+<textarea
+id="observacao"
+rows="5"
+placeholder="Digite uma observação interna..."></textarea>
+
+
+</div>
+
+
+
+
+
+<div class="botoes">
+
+
+<button
+id="btnSalvar"
+class="btn principal">
+
+Salvar alterações
+
+</button>
+
+
+
+<a
+href="{{ url_for('pages.dashboard') }}"
+class="btn secundario">
+
+Cancelar
+
+</a>
+
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+<script src="{{ url_for('static', filename='js/detalhes_denuncia.js') }}"></script>
+
+
+</body>
+
+</html>

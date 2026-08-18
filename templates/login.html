@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login RH | Canal Anônimo SOS</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+
+</head>
+
+<body>
+
+<div class="pagina">
+
+    <header class="header">
+
+        <img src="{{ url_for('static', filename='img/logo.png') }}"
+             alt="Logo Lobios"
+             class="logo-header">
+
+        <a href="{{ url_for('pages.index') }}" class="login-rh">
+            ← Início
+        </a>
+
+    </header>
+
+    <div class="container">
+
+        <div class="topo">
+
+            <h1>Acesso RH</h1>
+
+            <p>Entre com suas credenciais para acessar o painel administrativo.</p>
+
+        </div>
+
+        <div class="conteudo">
+
+            <form id="loginForm">
+
+                <div class="campo">
+
+                    <label for="email">E-mail</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Digite seu e-mail"
+                        required>
+
+                </div>
+
+                <div class="campo">
+
+                    <label for="senha">Senha</label>
+
+                    <input
+                        type="password"
+                        id="senha"
+                        placeholder="Digite sua senha"
+                        required>
+
+                </div>
+
+                <p id="erro" style="color:red;margin:10px 0;"></p>
+
+                <div class="botoes">
+
+                    <button
+                        type="submit"
+                        class="btn principal">
+
+                        Entrar
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/login.js') }}"></script>
+
+</body>
+
+</html>

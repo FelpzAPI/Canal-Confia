@@ -1,0 +1,79 @@
+/* =====================================
+   LOGIN RH
+===================================== */
+
+
+.container{
+
+    max-width:500px;
+
+}
+
+
+/* FORM LOGIN */
+
+#loginForm{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+
+
+/* CAMPOS */
+
+#loginForm input{
+
+    height:50px;
+
+}
+
+
+
+/* BOTÃO */
+
+#loginForm .btn{
+
+    width:100%;
+
+}
+
+
+
+/* ERRO */
+
+#erro{
+
+    text-align:center;
+
+    font-weight:600;
+
+}
+
+
+
+/* HEADER LOGIN */
+
+.header .logo-header{
+
+    width:220px;
+
+}
+
+
+
+@media(max-width:768px){
+
+
+    .container{
+
+        max-width:100%;
+
+    }
+
+
+}

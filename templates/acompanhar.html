@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Acompanhar Ocorrência</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/acompanhar.css') }}">
+
+</head>
+
+<body>
+
+<div class="pagina">
+
+<header class="header">
+
+<img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo Lobios" class="logo-header">
+
+<a href="{{ url_for('pages.login') }}" class="login-rh">
+
+👤 Acesso RH
+
+</a>
+
+</header>
+
+
+<div class="container">
+
+
+<div class="topo">
+
+<h1>Acompanhar Ocorrência</h1>
+
+<p>Informe o protocolo para consultar o andamento.</p>
+
+</div>
+
+
+
+<div class="conteudo">
+
+
+<form>
+
+
+<div class="campo">
+
+<label>Protocolo</label>
+
+<input
+type="text"
+id="protocoloInput"
+placeholder="Ex.: SOS-2026-000154">
+
+</div>
+
+
+
+<div class="botoes">
+
+
+<button
+type="button"
+class="btn principal"
+onclick="consultar()">
+
+Consultar
+
+</button>
+
+
+
+<a
+href="{{ url_for('pages.index') }}"
+class="btn secundario">
+
+Voltar
+
+</a>
+
+
+</div>
+
+
+</form>
+
+
+
+
+
+<div id="resultado" style="display:none;">
+
+
+<div class="card">
+
+
+<h2>Status da ocorrência</h2>
+
+
+
+<p>
+<strong>Protocolo:</strong> 
+<span id="codigo"></span>
+</p>
+
+
+
+<p>
+<strong>Categoria:</strong> 
+<span id="categoria"></span>
+</p>
+
+
+
+<p>
+<strong>Status:</strong> 
+<span id="status"></span>
+</p>
+
+
+
+<p>
+<strong>Prioridade:</strong> 
+<span id="prioridade"></span>
+</p>
+
+
+
+<p>
+<strong>Prazo de resposta inicial:</strong> 
+<span id="prazo"></span>
+</p>
+
+
+
+<p>
+<strong>Última atualização:</strong> 
+<span id="data"></span>
+</p>
+
+
+
+<p>
+<strong>Observação do RH:</strong>
+</p>
+
+
+<p id="observacao"></p>
+
+
+
+<hr>
+
+
+
+<p>
+<strong>Mensagem do sistema:</strong>
+</p>
+
+
+<p id="mensagem">
+
+Acompanhe o andamento da sua ocorrência através deste protocolo.
+
+</p>
+
+
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+<script src="{{ url_for('static', filename='js/acompanhar.js') }}"></script>
+
+
+</body>
+
+</html>

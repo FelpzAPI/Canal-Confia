@@ -1,0 +1,124 @@
+/* =====================================
+   DETALHES DA DENÚNCIA
+===================================== */
+
+
+/* CARD PRINCIPAL */
+
+.detalhes-card{
+
+    background:white;
+
+    border-radius:12px;
+
+    padding:25px;
+
+}
+
+
+
+/* CAMPOS SOMENTE LEITURA */
+
+input[readonly],
+textarea[readonly]{
+
+    background:#f8f8f8;
+
+    cursor:not-allowed;
+
+}
+
+
+
+/* DESCRIÇÃO */
+
+#descricao{
+
+    min-height:180px;
+
+}
+
+
+
+/* OBSERVAÇÃO DO RH */
+
+#observacao{
+
+    min-height:150px;
+
+}
+
+
+
+/* SELECTS */
+
+#status,
+#prioridade{
+
+    cursor:pointer;
+
+}
+
+
+
+/* ÁREA DO ANEXO */
+
+#areaAnexo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-top:10px;
+
+    padding:15px;
+
+    background:#f8f8f8;
+
+    border-radius:10px;
+
+    border:1px solid #ddd;
+
+}
+
+
+
+/* BOTÃO DO ANEXO */
+
+#areaAnexo .btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+
+
+/* BOTÕES INFERIORES */
+
+.botoes{
+
+    margin-top:25px;
+
+}
+
+
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+    #areaAnexo{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+}

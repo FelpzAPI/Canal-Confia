@@ -1,0 +1,505 @@
+/* =====================================
+   CANAL ANÔNIMO SOS - GLOBAL CSS
+===================================== */
+
+
+/* =====================================
+   RESET
+===================================== */
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+
+}
+
+
+
+/* =====================================
+   VARIÁVEIS
+===================================== */
+
+:root{
+
+    --roxo:#6c2b87;
+    --roxo-escuro:#4E2A84;
+    --roxo-claro:#F3EEFC;
+
+    --bg:#f5f5f5;
+    --card:#ffffff;
+
+    --texto:#333;
+    --borda:#ddd;
+
+}
+
+
+
+/* =====================================
+   BODY
+===================================== */
+
+body{
+
+    background:var(--bg);
+
+    color:var(--texto);
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:25px;
+
+}
+
+
+
+/* =====================================
+   ESTRUTURA
+===================================== */
+
+.pagina{
+
+    width:100%;
+
+    max-width:1000px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+
+
+.container{
+
+    width:100%;
+
+    background:var(--card);
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 12px 35px rgba(0,0,0,.12);
+
+}
+
+
+
+/* =====================================
+   LOGOS
+===================================== */
+
+.logo{
+
+    width:250px;
+
+    height:auto;
+
+    margin-bottom:24px;
+
+}
+
+
+
+.logo-header{
+
+    width:220px;
+
+    height:auto;
+
+}
+
+
+
+/* =====================================
+   HEADER
+===================================== */
+
+.header{
+
+    width:100%;
+
+    max-width:850px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.login-rh{
+
+    text-decoration:none;
+
+    background:var(--roxo);
+
+    color:white;
+
+    padding:12px 20px;
+
+    border-radius:12px;
+
+    font-weight:600;
+
+    transition:.25s;
+
+}
+
+
+
+.login-rh:hover{
+
+    background:var(--roxo-escuro);
+
+    transform:translateY(-2px);
+
+}
+
+
+
+/* =====================================
+   TOPO DAS PÁGINAS
+===================================== */
+
+.topo{
+
+    background:var(--roxo);
+
+    color:white;
+
+    text-align:center;
+
+    padding:40px;
+
+}
+
+
+
+.topo h1{
+
+    font-size:2rem;
+
+    margin-bottom:8px;
+
+}
+
+
+
+.topo p{
+
+    opacity:.95;
+
+}
+
+
+
+/* =====================================
+   CONTEÚDO
+===================================== */
+
+.conteudo{
+
+    padding:35px;
+
+}
+
+
+
+/* =====================================
+   CARDS GERAIS
+===================================== */
+
+.card{
+
+    background:white;
+
+    border-radius:12px;
+
+    padding:20px;
+
+    margin-bottom:25px;
+
+    box-shadow:
+
+    0 5px 15px rgba(0,0,0,.05);
+
+}
+
+
+
+.card h2{
+
+    color:var(--roxo);
+
+    margin-bottom:10px;
+
+}
+
+
+
+.card p{
+
+    line-height:1.8;
+
+}
+
+
+
+/* =====================================
+   FORMULÁRIOS
+===================================== */
+
+form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+
+
+.campo label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    font-weight:600;
+
+}
+
+
+
+input,
+select,
+textarea{
+
+    width:100%;
+
+    padding:14px;
+
+    border:1px solid var(--borda);
+
+    border-radius:10px;
+
+    font-size:15px;
+
+}
+
+
+
+input:focus,
+select:focus,
+textarea:focus{
+
+    outline:none;
+
+    border-color:var(--roxo);
+
+}
+
+
+
+textarea{
+
+    resize:vertical;
+
+    min-height:150px;
+
+}
+
+
+
+/* =====================================
+   BOTÕES
+===================================== */
+
+.botoes{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+    margin-top:10px;
+
+}
+
+
+
+.btn{
+
+    text-decoration:none;
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:14px 28px;
+
+    border-radius:12px;
+
+    font-weight:600;
+
+    transition:.25s;
+
+}
+
+
+
+.principal{
+
+    background:var(--roxo);
+
+    color:white;
+
+}
+
+
+
+.principal:hover{
+
+    background:var(--roxo-escuro);
+
+}
+
+
+
+.secundario{
+
+    border:2px solid var(--roxo);
+
+    color:var(--roxo);
+
+    background:white;
+
+}
+
+
+
+.secundario:hover{
+
+    background:var(--roxo);
+
+    color:white;
+
+}
+
+
+
+/* =====================================
+   TABELAS GERAIS
+===================================== */
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+
+
+th,
+td{
+
+    padding:14px;
+
+    border-bottom:1px solid var(--borda);
+
+}
+
+
+
+/* =====================================
+   RESPONSIVO
+===================================== */
+
+@media(max-width:768px){
+
+
+    body{
+
+        padding:15px;
+
+    }
+
+
+
+    .conteudo{
+
+        padding:24px;
+
+    }
+
+
+
+    .header{
+
+        flex-direction:column;
+
+        gap:20px;
+
+    }
+
+
+
+    .logo{
+
+        width:170px;
+
+    }
+
+
+
+    .logo-header{
+
+        width:150px;
+
+    }
+
+
+
+    .topo{
+
+        padding:30px 20px;
+
+    }
+
+
+
+    .topo h1{
+
+        font-size:1.6rem;
+
+    }
+
+
+}

@@ -1,0 +1,162 @@
+/* =====================================
+   PROTOCOLO - DENÚNCIA ENVIADA
+===================================== */
+
+
+/* CARD DE SUCESSO */
+
+.sucesso{
+
+    text-align:center;
+
+    background:#f3eefc;
+
+    border-left:6px solid var(--roxo);
+
+    border-radius:12px;
+
+    padding:25px;
+
+    margin-bottom:30px;
+
+}
+
+
+
+.sucesso h2{
+
+    color:var(--roxo);
+
+    margin-bottom:15px;
+
+}
+
+
+
+.sucesso p{
+
+    line-height:1.7;
+
+}
+
+
+
+/* CAIXA DO PROTOCOLO */
+
+.protocolo-box{
+
+    background:var(--roxo-claro);
+
+    border:2px dashed var(--roxo);
+
+    border-radius:15px;
+
+    padding:35px;
+
+    margin:35px 0;
+
+    text-align:center;
+
+}
+
+
+
+.protocolo-box span{
+
+    font-size:18px;
+
+    color:#666;
+
+}
+
+
+
+.protocolo-box h1{
+
+    color:var(--roxo);
+
+    font-size:42px;
+
+    letter-spacing:3px;
+
+    margin-top:15px;
+
+}
+
+
+
+/* BOTÕES */
+
+.botoes{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+/* TOAST */
+
+#toast{
+
+    position:fixed;
+
+    bottom:30px;
+
+    right:30px;
+
+    background:var(--roxo);
+
+    color:white;
+
+    padding:15px 25px;
+
+    border-radius:12px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
+
+    opacity:0;
+
+    transform:translateY(20px);
+
+    pointer-events:none;
+
+    transition:.35s;
+
+    font-weight:500;
+
+    z-index:9999;
+
+}
+
+
+
+#toast.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+
+    .protocolo-box h1{
+
+        font-size:28px;
+
+    }
+
+
+}

@@ -1,0 +1,166 @@
+/* =====================================
+   ADMINISTRADORES
+===================================== */
+
+
+/* ÁREA DE CADASTRO */
+
+.admin-form{
+
+    background:#fff;
+
+    border-radius:12px;
+
+    padding:25px;
+
+    margin-bottom:30px;
+
+    box-shadow:0 4px 10px rgba(0,0,0,.08);
+
+}
+
+
+
+.admin-form h2{
+
+    color:var(--roxo);
+
+    margin-bottom:20px;
+
+}
+
+
+
+/* FORM ADMIN */
+
+#formAdmin{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+
+
+/* LISTA DE ADMINS */
+
+.lista-admin{
+
+    background:white;
+
+    border-radius:12px;
+
+    padding:25px;
+
+}
+
+
+
+/* TABELA */
+
+.admin-table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    margin-top:20px;
+
+}
+
+
+
+.admin-table th{
+
+    background:var(--roxo);
+
+    color:white;
+
+    padding:14px;
+
+    text-align:left;
+
+}
+
+
+
+.admin-table td{
+
+    padding:14px;
+
+    border-bottom:1px solid #ddd;
+
+}
+
+
+
+/* BOTÃO EXCLUIR */
+
+.btn-excluir{
+
+    background:#dc3545;
+
+    color:white;
+
+    padding:10px 18px;
+
+    border-radius:10px;
+
+    border:none;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+}
+
+
+
+.btn-excluir:hover{
+
+    background:#b02a37;
+
+}
+
+
+
+/* MENSAGENS */
+
+#mensagemAdmin{
+
+    margin-top:15px;
+
+    text-align:center;
+
+    font-weight:600;
+
+}
+
+
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+
+    .admin-table{
+
+        display:block;
+
+        overflow-x:auto;
+
+    }
+
+
+}
+
+.senha-info{
+    display:block;
+    margin-top:8px;
+    color:#666;
+    font-size:13px;
+    line-height:1.4;
+}

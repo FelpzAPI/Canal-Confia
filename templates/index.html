@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Canal Anônimo SOS</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="pagina">
+
+    <header class="header">
+
+        <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo Lobios" class="logo-header">
+
+        <a href="{{ url_for('pages.login') }}" class="login-rh">
+            👤 Acesso RH
+        </a>
+
+    </header>
+
+    <div class="container">
+
+        <div class="topo">
+
+            <h1>💜 Canal Anônimo SOS</h1>
+
+            <p>Um espaço seguro para ouvir você.</p>
+
+        </div>
+
+        <div class="conteudo">
+
+            <div class="card">
+
+                <h2>Confidencialidade garantida</h2>
+
+                <p>
+                    Este canal foi desenvolvido para que colaboradores possam registrar ocorrências,
+                    reclamações, sugestões ou relatar situações que impactem o ambiente de trabalho.
+
+                    Nenhum dado pessoal será solicitado e todas as informações serão tratadas com
+                    confidencialidade pelo setor responsável.
+                </p>
+
+            </div>
+
+            <div class="info">
+
+                <div class="box">
+
+                    <h3>🔒 Anônimo</h3>
+
+                    <p>Sua identidade será preservada durante todo o processo.</p>
+
+                </div>
+
+                <div class="box">
+
+                    <h3>📄 Protocolo</h3>
+
+                    <p>Receba um código para acompanhar sua ocorrência.</p>
+
+                </div>
+
+                <div class="box">
+
+                    <h3>🤝 Acompanhamento</h3>
+
+                    <p>O RH analisará cada caso com responsabilidade.</p>
+
+                </div>
+
+            </div>
+
+            <div class="botoes">
+
+                <a class="btn principal" href="{{ url_for('pages.nova_denuncia') }}">
+                    Registrar ocorrência
+                </a>
+
+                <a class="btn secundario" href="{{ url_for('pages.acompanhar') }}">
+                    Acompanhar protocolo
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

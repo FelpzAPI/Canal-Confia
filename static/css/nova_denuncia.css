@@ -1,0 +1,82 @@
+/* =====================================
+   NOVA DENÚNCIA
+===================================== */
+
+
+/* CARD DE CONFIDENCIALIDADE */
+
+.card{
+
+    margin-bottom:30px;
+
+}
+
+
+
+/* FORMULÁRIO */
+
+#formDenuncia{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+
+
+/* SELECT CATEGORIA */
+
+#categoria{
+
+    cursor:pointer;
+
+}
+
+
+
+/* ÁREA DE TEXTO */
+
+#descricao{
+
+    min-height:200px;
+
+}
+
+
+
+/* INPUT DE ARQUIVO */
+
+input[type="file"]{
+
+    background:white;
+
+    cursor:pointer;
+
+}
+
+
+
+/* BOTÕES */
+
+.botoes{
+
+    margin-top:20px;
+
+}
+
+
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+    #descricao{
+
+        min-height:150px;
+
+    }
+
+}
