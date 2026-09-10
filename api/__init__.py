@@ -49,17 +49,12 @@ def criar_app():
     from api.model import Usuario, Denuncia
 
     # =====================================
-    # CRIA TABELAS E GERENTE PADRÃO
+    # CRIA TABELAS
     # =====================================
 
     with app.app_context():
 
         db.create_all()
-
-        from api.routes.auth import criar_gerente_padrao
-
-        criar_gerente_padrao()
-
     # =====================================
     # IMPORTS DAS ROTAS
     # =====================================
